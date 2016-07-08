@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd ">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>maven-test</artifactId>
+	<artifactId>civic_test</artifactId>
 	<groupId>com.peoplesoft.testmaven</groupId>
-	<version>1.0.0</version>
+	<version>1.0</version>
 	<packaging>war</packaging>
 
 <build> 
 	<directory>C:\temp</directory>
+	<plugins>
+      <plugin>            
+  		 <groupId>org.apache.maven.plugins</groupId>
+ 		 <artifactId>maven-war-plugin</artifactId>
+ 		 <configuration>
+   			 <webXml>WebContent\WEB-INF\web.xml</webXml>        
+ 		 </configuration>
+		</plugin>
+    </plugins>
 </build>
 
 <profiles>
@@ -31,6 +40,15 @@
 		<artifactId>commons-lang3</artifactId>
 		<version>3.4</version>
 	</dependency>
+	
+	<dependency>
+   	 	<groupId>javax.servlet</groupId>
+    	<artifactId>javax.servlet-api</artifactId>
+   		 <version>3.1.0</version>
+	</dependency>
+
 </dependencies>
+
+
 
 </project>
